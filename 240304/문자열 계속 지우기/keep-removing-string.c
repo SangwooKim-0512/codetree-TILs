@@ -29,8 +29,8 @@ int main() {
         }
         if(idx == -1) break; // 없으면 그냥 그대로 끝내고 A출력
 
-        for(int i = idx; i < len_B; i++)
-            A[i] = A[i+1];
+        for(int i = idx + len_B; i < len_A; i++)
+            A[i - len_B] = A[i];
         A[len_A - len_B] = '\0';
 
     }
