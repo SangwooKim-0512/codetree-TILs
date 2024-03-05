@@ -13,7 +13,6 @@ bool JudgeArr(int *a, int *b){
 }
 
 int main() {
-    int n1, n2;
     cin >> n1 >> n2;
     int a[n1], b[n2];
 
