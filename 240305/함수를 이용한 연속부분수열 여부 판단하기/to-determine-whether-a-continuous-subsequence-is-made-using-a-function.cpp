@@ -6,11 +6,12 @@ int n1, n2;
 bool JudgeArr(int *a, int *b){
     if(n1 < n2) return false;
     for(int i = 0; i <= n1-n2; i++){
-        for(int j = 0; j < n2; j++){
-            if(a[i+j] != b[j]) return false;
-        }
+        int cnt = 0;
+        for(int j = 0; j < n2; j++)
+            if(a[i+j] == b[j]) cnt ++;
+        if(cnt == n2) return true;
     }
-    return true;
+    return false;
 }
 
 int main() {
