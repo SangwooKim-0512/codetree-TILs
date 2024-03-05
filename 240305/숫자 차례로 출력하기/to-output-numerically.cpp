@@ -9,7 +9,7 @@ void Print1(int N){
 void Print2(int N){
     if(N == 0) return;
     cout << N << " ";
-    Print1(N-1);
+    Print2(N-1);
 }
 
 int main() {
