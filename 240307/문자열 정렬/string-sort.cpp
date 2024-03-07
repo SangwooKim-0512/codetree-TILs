@@ -6,9 +6,9 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    string str;
-    cin >> str;
-    sort(str.begin(), str.end());
-    cout << str;
+    string str1;
+    cin >> str1;
+    sort(str1.begin(), str1.end());
+    cout << str1;
     return 0;
 }
