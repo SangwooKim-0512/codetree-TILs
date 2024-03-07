@@ -20,14 +20,19 @@ int main() {
     string str[n];
     for(int i = 0; i < n; i ++) cin >> str[i];
 
-    sort(str, str+n);
+    //sort(str, str+n);
 
     int cnt = 0;
-    
-    for(int i = 0; i < n; i++){
-        if(IncludeStr(str[i], t)) cnt ++;
-        if(cnt == k) cout << str[i];
-    }
+
+    string word[100];
+    for(int i = 0; i < n; i++)
+        if(IncludeStr(str[i], t)){
+            word[cnt] = str[i];
+            cnt ++;
+        }
+    sort(word, word + cnt);
+
+    cout << word[k-1];
 
     return 0;
 }
