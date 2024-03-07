@@ -21,7 +21,9 @@ int main() {
     for(int i = 0; i < n; i ++) cin >> str[i];
 
     sort(str, str+n);
+
     int cnt = 0;
+    
     for(int i = 0; i < n; i++){
         if(IncludeStr(str[i], t)) cnt ++;
         if(cnt == k) cout << str[i];
