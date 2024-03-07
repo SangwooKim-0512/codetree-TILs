@@ -5,6 +5,7 @@
 using namespace std;
 
 bool IncludeStr(string a, string b){
+    if(a.size() < b.size()) return false;
     for(int i = 0; i < b.size(); i ++)
         if(a[i] != b[i]) return false;
     return true;
