@@ -33,11 +33,23 @@ bool Minday(string A, string B){
 
 }
 
+Weather ans = Weather("9999-99-99", "dfsa", "fdsa");
 
 int main() {
     int n;
     cin >> n;
-    Weather weathers[n];
+
+
+    for(int i = 0; i < n; i++){
+        string date, dotw, condition;
+        cin >> date >> dotw >> condition;
+
+        Weather w = Weather(date, dotw, condition);
+        if(condition == "Rain")
+            if(ans.dat >= w.date) ans = w;
+    }
+    cout << ans.date << " " << ans.dotw << " " << ans.condition;
+    /*Weather weathers[n];
     for(int i = 0; i < n; i++){
         string date, dotw, condition;
         cin >> date >> dotw >> condition;
@@ -59,5 +71,7 @@ int main() {
         }
     }
     cout << weathers[idx].date << " " << weathers[idx].dotw << " " << weathers[idx].condition;
+    
+    */
     return 0;
 }
