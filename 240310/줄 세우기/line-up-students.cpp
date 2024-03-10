@@ -14,9 +14,9 @@ class Student{
 };
 
 bool Cmp(Student a, Student b){
-    if(a.h =! b.h)
+    if(a.h != b.h)
         return a.h > b.h;
-    if(a.w =! b.w)
+    if(a.w != b.w)
         return a.w > b.w;
     return a.n > b.n;
 }
