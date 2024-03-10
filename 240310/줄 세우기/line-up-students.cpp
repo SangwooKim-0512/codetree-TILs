@@ -18,7 +18,7 @@ bool Cmp(Student a, Student b){
         return a.h > b.h;
     if(a.w != b.w)
         return a.w > b.w;
-    return a.n > b.n;
+    return a.n < b.n;
 }
 
 int main() {
