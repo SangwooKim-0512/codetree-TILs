@@ -29,7 +29,7 @@ int main() {
     }*/
 
     int nday = Numdays(m2, d2) - Numdays(m1, d1);
-    if(nday < 0) nday += 7;
+    while(nday < 0) nday += 7;
     printf("%s", dotw[nday % 7]);
     return 0;
 }
