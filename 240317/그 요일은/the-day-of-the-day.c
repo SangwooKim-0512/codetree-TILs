@@ -27,7 +27,8 @@ int main() {
             idx = i;
     }
     //printf("%d %d\n", ndays, idx);
-    printf("%d", ((ndays - idx) / 7) + 1);
+    if(ndays < idx) printf("0");
+    else printf("%d", ((ndays - idx) / 7) + 1);
 
     return 0;
 }
