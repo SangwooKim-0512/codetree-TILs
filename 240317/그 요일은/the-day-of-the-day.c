@@ -26,7 +26,7 @@ int main() {
         if(strcmp(dotw[i], day_of_week) == 0)
             idx = i;
     }
-    printf("%d %d\n", ndays, idx);
+    //printf("%d %d\n", ndays, idx);
     printf("%d", ((ndays - idx) / 7) + 1);
 
     return 0;
