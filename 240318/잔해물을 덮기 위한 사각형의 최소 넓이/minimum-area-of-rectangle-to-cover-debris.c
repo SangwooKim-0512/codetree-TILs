@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 //가장 작은 x1y1 인덱스와 가장 큰 x2y2인덱스를 구한다.
 
 int main() {
@@ -21,11 +22,11 @@ int main() {
     }
     int max_x = 0, max_y = 0, min_x = 2001, min_y = 2001;
 
-
+    bool exist = false;
     for(int x = 0; x < 2001; x ++){
         for(int y = 0; y < 2001; y++){
             if(arr[x][y] == 1){
-
+                exist = true;
                 if(x > max_x) max_x = x;
                 if(y > max_y) max_y = y;
                 if(x < min_x) min_x = x;
@@ -33,7 +34,10 @@ int main() {
             }
         }
     }
-    int area = (max_x - min_x + 1) * (max_y - min_y + 1);
-    printf("%d", area);
+    if(exist){
+        int area = (max_x - min_x + 1) * (max_y - min_y + 1);
+        printf("%d", area);
+    }
+    else printf("%d", 0);
     return 0;
 }
