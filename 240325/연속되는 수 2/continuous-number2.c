@@ -3,7 +3,7 @@
 int main() {
     int n, num[1001];
     scanf("%d%d", &n, &num[0]);
-    int cnt = 1, max = 0;
+    int cnt = 1, max = 1;
     int arr[1001];
 
     for(int i = 1; i < n; i++){
